@@ -1,0 +1,43 @@
+{
+  "name": "hash-generator",
+  "version": "1.0.0",
+  "description": "Free online cryptographic hash generator for MD5, SHA-1, SHA-256, SHA-384, SHA-512",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "serve": "npx http-server",
+    "build": "echo 'Static site - no build required'",
+    "test": "echo 'Manual testing recommended'",
+    "lighthouse": "lighthouse https://hash-generator.pro --chrome-flags=\"--headless\" --output=json"
+  },
+  "keywords": [
+    "hash",
+    "md5",
+    "sha-256",
+    "sha-1",
+    "sha-384",
+    "sha-512",
+    "cryptography",
+    "generator",
+    "online",
+    "tool"
+  ],
+  "author": "Hash Generator Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/hash-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/hash-generator/issues"
+  },
+  "homepage": "https://hash-generator.pro",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "lighthouse": "^10.0.0"
+  }
+}

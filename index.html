@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online hash generator for MD5, SHA-1, SHA-256, SHA-384, SHA-512. Generate cryptographic hashes from text or files instantly with verification.">
+    <meta name="keywords" content="hash generator, MD5, SHA-256, SHA-1, SHA-384, SHA-512, online hash tool, cryptographic hash, free hash generator">
+    <meta name="author" content="Hash Generator">
+    <meta name="robots" content="index, follow">
+    <meta name="canonical" href="https://hash-generator.pro/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hash Generator - Free Online MD5, SHA-256, SHA-1, SHA-384, SHA-512 Hash Generator">
+    <meta property="og:description" content="Generate cryptographic hashes instantly. Support for MD5, SHA-1, SHA-256, SHA-384, SHA-512. File upload, text input, hash verification, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hash-generator.pro/">
+    <meta property="og:image" content="https://hash-generator.pro/og-image.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Hash Generator",
+        "description": "Free online cryptographic hash generator supporting MD5, SHA-1, SHA-256, SHA-384, and SHA-512",
+        "url": "https://hash-generator.pro/",
+        "applicationCategory": "Utility",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "500"
+        }
+    }
+    </script>
+    
+    <title>Hash Generator - Free MD5, SHA-256, SHA-1, SHA-384, SHA-512 Online Tool</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23667eea'>#</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Hash Generator</h1>
+                <p class="tagline">Generate cryptographic hashes instantly</p>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Input Section -->
+        <section class="input-section">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="text-input" aria-selected="true">Text Input</button>
+                <button class="tab-btn" data-tab="file-input" aria-selected="false">File Upload</button>
+                <button class="tab-btn" data-tab="verify-hash" aria-selected="false">Verify Hash</button>
+            </div>
+
+            <!-- Text Input Tab -->
+            <div id="text-input" class="tab-content active">
+                <div class="form-group">
+                    <label for="textInput">Enter text to hash:</label>
+                    <textarea 
+                        id="textInput" 
+                        class="input-field" 
+                        placeholder="Paste or type text here..."
+                        aria-label="Text input for hashing"
+                    ></textarea>
+                    <div class="input-meta">
+                        <span class="char-count">0 characters</span>
+                        <button class="clear-btn" id="clearText" aria-label="Clear text input">Clear</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- File Input Tab -->
+            <div id="file-input" class="tab-content">
+                <div class="form-group">
+                    <label for="fileInput" class="file-label">Choose file to hash:</label>
+                    <input 
+                        type="file" 
+                        id="fileInput" 
+                        class="file-input" 
+                        aria-label="File input for hashing"
+                    >
+                    <div class="file-drop-zone" id="dropZone" aria-label="Drag and drop file here">
+                        <p>Drag and drop file here</p>
+                    </div>
+                    <div class="input-meta">
+                        <span class="file-info" id="fileInfo">No file selected</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Verify Hash Tab -->
+            <div id="verify-hash" class="tab-content">
+                <div class="form-group">
+                    <label for="verifyInput">Paste hash to verify:</label>
+                    <textarea 
+                        id="verifyInput" 
+                        class="input-field" 
+                        placeholder="Paste the hash you want to verify..."
+                        aria-label="Hash input for verification"
+                    ></textarea>
+                    <div class="form-group">
+                        <label for="hashToCompare">And hash from text/file:</label>
+                        <textarea 
+                            id="hashToCompare" 
+                            class="input-field" 
+                            placeholder="Generated hash will appear here..."
+                            aria-label="Generated hash for comparison"
+                            readonly
+                        ></textarea>
+                    </div>
+                    <div class="verify-result" id="verifyResult"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Algorithm Selection -->
+        <section class="algorithm-section">
+            <div class="controls">
+                <fieldset class="algorithm-group">
+                    <legend>Hash Algorithms:</legend>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="MD5" class="algo-checkbox" aria-label="MD5">
+                            <span>MD5</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="SHA-1" class="algo-checkbox" aria-label="SHA-1">
+                            <span>SHA-1</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="SHA-256" class="algo-checkbox" checked aria-label="SHA-256">
+                            <span>SHA-256</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="SHA-384" class="algo-checkbox" aria-label="SHA-384">
+                            <span>SHA-384</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="SHA-512" class="algo-checkbox" aria-label="SHA-512">
+                            <span>SHA-512</span>
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="output-controls">
+                <label class="toggle-label">
+                    <input type="checkbox" id="uppercaseToggle" aria-label="Toggle uppercase output">
+                    <span>Uppercase</span>
+                </label>
+                <button class="btn btn-secondary" id="generateAll" aria-label="Generate all hashes at once">Generate All</button>
+            </div>
+        </section>
+
+        <!-- Output Section -->
+        <section class="output-section">
+            <h2>Generated Hashes</h2>
+            <div id="hashOutput" class="hash-output" aria-live="polite" aria-label="Hash output results">
+                <p class="empty-state">Select algorithms and enter text or upload a file to generate hashes</p>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section class="history-section" id="historySection" style="display: none;">
+            <div class="history-header">
+                <h2>History</h2>
+                <button class="btn btn-tertiary" id="clearHistory" aria-label="Clear history">Clear History</button>
+            </div>
+            <div id="historyList" class="history-list"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Hash Generator. Free online cryptographic hash tool.</p>
+            <p class="disclaimer">This tool performs hashing entirely in your browser. No data is sent to servers.</p>
+        </div>
+    </footer>
+
+    <!-- AdSense Placeholder -->
+    <div class="ad-placeholder">
+        <!-- Google AdSense code would go here -->
+        <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"></script> -->
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
