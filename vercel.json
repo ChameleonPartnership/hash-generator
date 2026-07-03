@@ -1,6 +1,4 @@
 {
-  "name": "hash-generator",
-  "buildCommand": "echo 'Static site'",
   "outputDirectory": ".",
   "headers": [
     {
