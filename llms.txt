@@ -1,0 +1,88 @@
+# Hash Generator
+
+> Free online cryptographic hash generator for MD5, SHA-1, SHA-256, SHA-384, SHA-512. Generate hashes from text or files instantly with complete privacy and security.
+
+## Overview
+
+Hash Generator is a privacy-first, browser-based tool for creating cryptographic hashes. All hashing operations occur entirely in your browser—no data is sent to external servers, ensuring complete privacy and security.
+
+**What it does:**
+- Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes from text input
+- Hash files up to 100MB without uploading to servers
+- Verify file integrity by comparing hashes
+- Save hash generation history in browser storage
+- Download hashes with one-click copying
+
+**Key features:**
+- No server uploads—100% browser-based processing
+- Support for five industry-standard hash algorithms
+- Dark mode and light mode themes
+- Full keyboard navigation and WCAG AA accessibility
+- Responsive design for desktop, tablet, and mobile
+- Free, open-source, no registration required
+
+## Why Use Hash Generator?
+
+Hash generators are essential for:
+- **File integrity verification** — Confirm files haven't been corrupted or tampered with
+- **Password security** — Understand how modern web apps securely store passwords
+- **Software distribution** — Verify downloaded software matches publisher hashes
+- **Digital signatures** — Authenticate documents and transactions
+- **Blockchain** — Explore SHA-256 hashing used in Bitcoin and Ethereum
+- **Data verification** — Ensure checksums match across systems and transfers
+
+## Target Audience
+
+- **Developers** — Verify file checksums and learn cryptographic hashing
+- **Security professionals** — Test and demonstrate hash algorithms
+- **System administrators** — Generate file integrity checksums
+- **Students** — Learn how cryptographic hashing works
+- **Privacy-conscious users** — Hash data without cloud uploads
+- **Anyone verifying downloads** — Ensure file authenticity
+
+## Key Topics
+
+- Cryptographic hashing
+- MD5, SHA-1, SHA-256, SHA-384, SHA-512 algorithms
+- File integrity verification
+- Hash verification and comparison
+- Browser-based data processing
+- Data privacy and security
+- Algorithm selection and best practices
+- File checksums and downloads
+- Password hashing and security
+- Blockchain and cryptocurrency hashing
+
+## FAQ
+
+**Is my data safe?**
+Yes. All hashing happens in your browser. No data is sent to servers.
+
+**Which algorithm should I use?**
+SHA-256 for most purposes. SHA-512 for maximum security. Avoid MD5 and SHA-1 for cryptographic applications.
+
+**How large can files be?**
+Up to 100MB, though 50MB or less is recommended for best performance.
+
+**Can I verify hashes match?**
+Yes, use the "Verify Hash" tab to compare two hashes.
+
+**Is it free?**
+Completely free and open-source.
+
+## Technical Details
+
+- **Platform:** Web browser (Chrome, Firefox, Safari, Edge, etc.)
+- **Technology:** Pure JavaScript (no backend servers)
+- **Algorithms:** TweetNaCl.js / built-in Web Crypto API
+- **License:** MIT
+- **Source:** GitHub (open-source)
+
+## Get Started
+
+1. Paste text or upload a file
+2. Select hash algorithms (SHA-256 recommended)
+3. Generate hashes instantly
+4. Copy, compare, or verify results
+
+No installation, registration, or internet uploads required.

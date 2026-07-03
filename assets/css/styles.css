@@ -747,3 +747,179 @@ textarea.input-field {
     outline: 3px solid var(--primary);
     outline-offset: 2px;
 }
+
+/* New Section Styles */
+
+/* Section Blurbs */
+.section-blurb {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    margin: 12px 0 24px 0;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* Intro Section */
+.intro-section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: var(--bg-white);
+    border-radius: 12px;
+    border-left: 4px solid var(--primary);
+}
+
+.intro-section h2 {
+    margin-bottom: 16px;
+    color: var(--text-dark);
+}
+
+/* Tab Descriptions */
+.tab-description {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin: 12px 0 20px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Algorithm Note */
+.algo-note {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+/* Algorithm List */
+.algorithm-list {
+    margin: 20px 0 0 20px;
+    list-style: disc;
+}
+
+.algorithm-list li {
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.algorithm-list strong {
+    color: var(--primary);
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-top: 50px;
+    padding: 30px;
+    background: var(--bg-white);
+    border-radius: 12px;
+}
+
+.faq-section h2 {
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.faq-container {
+    margin-top: 30px;
+}
+
+.faq-item {
+    margin-bottom: 28px;
+    padding: 20px;
+    background: var(--bg-light);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+}
+
+.faq-question {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.faq-answer {
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Use Cases Section */
+.use-cases-section {
+    margin-top: 50px;
+    padding: 30px;
+    background: var(--bg-white);
+    border-radius: 12px;
+}
+
+.use-cases-section h2 {
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.use-case-card {
+    padding: 24px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.use-case-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.15);
+    transform: translateY(-4px);
+}
+
+.use-case-card h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.use-case-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Footer Date */
+.footer-date {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 8px;
+}
+
+/* Responsive Adjustments for New Sections */
+@media (max-width: 768px) {
+    .intro-section,
+    .faq-section,
+    .use-cases-section {
+        padding: 20px;
+    }
+    
+    .use-cases-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-item {
+        padding: 16px;
+    }
+    
+    .section-blurb {
+        font-size: 1rem;
+    }
+}
