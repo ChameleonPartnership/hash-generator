@@ -32,6 +32,5 @@
   "homepage": "https://hash-generator.pro",
   "engines": {
     "node": ">=14.0.0"
-  },
-
+  }
 }

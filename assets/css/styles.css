@@ -760,7 +760,8 @@ textarea.input-field {
 }
 
 /* Intro Section */
-.intro-section {
+.intro-section,
+.author-section {
     margin-bottom: 40px;
     padding: 30px;
     background: var(--bg-white);
@@ -768,7 +769,8 @@ textarea.input-field {
     border-left: 4px solid var(--primary);
 }
 
-.intro-section h2 {
+.intro-section h2,
+.author-section h2 {
     margin-bottom: 16px;
     color: var(--text-dark);
 }

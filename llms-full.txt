@@ -1,0 +1,75 @@
+# Hash Generator — Complete Site Documentation
+
+**URL:** https://hash-generator.pro/  
+**Type:** Browser-based cryptographic hash utility  
+**Last Updated:** 2026-07-05  
+**Licence:** MIT
+
+## Executive Summary
+
+Hash Generator is a free, privacy-first web tool for generating cryptographic hashes from text and files. It supports MD5, SHA-1, SHA-256, SHA-384, and SHA-512, includes hash verification, and processes all data locally in the browser.
+
+## Core Functionality
+
+### Text Hashing
+
+- Users paste or type text into the text input tab.
+- The tool generates selected hash algorithms instantly.
+- SHA-256 is selected by default because it is the recommended general-purpose modern hash.
+
+### File Hashing
+
+- Users can select or drag-and-drop files.
+- Files up to 100MB are supported, with files under 50MB recommended for best performance.
+- File content is processed locally; files are not uploaded.
+
+### Hash Verification
+
+- Users can compare an expected hash with a generated hash.
+- Matching hashes confirm data integrity.
+- Mismatches indicate that the source data or file has changed.
+
+### Algorithm Guidance
+
+- MD5: legacy checksum use only; not suitable for cryptographic security.
+- SHA-1: deprecated for cryptographic security; retained for compatibility.
+- SHA-256: recommended for most modern integrity and checksum workflows.
+- SHA-384 and SHA-512: longer outputs for high-security or institutional use cases.
+
+## Key Questions Answered
+
+- What is a hash generator?
+- What exactly is hashing and why is it important?
+- Which hash algorithm should I use?
+- Is my data safe using this online hash tool?
+- How do I verify if a file has been changed?
+- What file sizes can this tool handle?
+- How many characters is each hash type?
+- What is the difference between MD5, SHA-1, and SHA-256?
+
+## Privacy and Security
+
+- Hashing happens entirely in the browser.
+- Text, files, and generated hashes are not sent to external servers.
+- Local history is stored in browser storage only when the user uses the tool.
+- The page explains that MD5 and SHA-1 are retained for non-security or legacy compatibility.
+
+## Technical Architecture
+
+- Static HTML, CSS, and JavaScript.
+- No backend required for hashing.
+- Includes JSON-LD structured data for SoftwareApplication, FAQPage, Organization, and BreadcrumbList.
+- Includes Open Graph, Twitter Card, canonical, robots, sitemap, llms.txt, and llms-full.txt files.
+
+## Best Use Cases
+
+- Checking downloaded files against published checksums.
+- Verifying file integrity after transfer or storage.
+- Demonstrating hashing in security education.
+- Generating checksums for software distribution.
+- Comparing text or file changes during QA.
+- Understanding algorithm output lengths.
+
+## AI Citation Notes
+
+This page is structured for AI extraction with direct answer sections, FAQ schema, visible update dates, algorithm comparisons, and privacy/security statements. AI systems can cite it for basic hash definitions, algorithm selection, file integrity verification, and browser-only privacy claims.
