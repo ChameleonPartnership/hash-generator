@@ -606,6 +606,25 @@ textarea.input-field {
     margin: 5px 0;
 }
 
+.footer a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer a:hover,
+.footer a:focus {
+    color: var(--primary-dark);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 .disclaimer {
     font-style: italic;
     margin-top: 10px;
@@ -905,11 +924,48 @@ textarea.input-field {
     margin-top: 8px;
 }
 
+/* Legal Pages */
+.legal-section {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+.legal-section h2 {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+}
+
+.legal-section p,
+.legal-section li {
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.legal-section ul {
+    padding-left: 22px;
+}
+
+.legal-section a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.legal-section a:hover,
+.legal-section a:focus {
+    color: var(--primary-dark);
+}
+
 /* Responsive Adjustments for New Sections */
 @media (max-width: 768px) {
     .intro-section,
     .faq-section,
-    .use-cases-section {
+    .use-cases-section,
+    .legal-section {
         padding: 20px;
     }
     

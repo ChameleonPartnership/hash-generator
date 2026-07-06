@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Use for Hash Generator, a free browser-based cryptographic hash tool.">
+    <meta name="keywords" content="Hash Generator terms, terms of use, terms of service, hash tool terms">
+    <meta name="author" content="Hash Generator">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hash-generator.pro/terms.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Terms of Service - Hash Generator">
+    <meta property="og:description" content="Terms of Use for Hash Generator, a free browser-based cryptographic hash tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hash-generator.pro/terms.html">
+    <meta property="og:image" content="https://hash-generator.pro/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Terms of Service - Hash Generator">
+    <meta name="twitter:description" content="Terms of Use for Hash Generator, a free browser-based cryptographic hash tool.">
+    <meta name="twitter:image" content="https://hash-generator.pro/og-image.png">
+
+    <!-- Publishing Dates -->
+    <meta property="article:published_time" content="2026-07-06T00:00:00Z">
+    <meta property="article:modified_time" content="2026-07-06T00:00:00Z">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Terms of Service - Hash Generator",
+        "description": "Terms of Use for Hash Generator, a free browser-based cryptographic hash tool.",
+        "url": "https://hash-generator.pro/terms.html",
+        "datePublished": "2026-07-06T00:00:00Z",
+        "dateModified": "2026-07-06T00:00:00Z"
+    }
+    </script>
+
+    <title>Terms of Service - Hash Generator</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23667eea'>#</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Hash Generator</h1>
+                <p class="tagline">Generate cryptographic hashes instantly</p>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="intro-section">
+            <h2>Terms of Service</h2>
+            <p class="section-blurb">Last updated: July 6, 2026</p>
+            <p>These Terms of Use govern your use of Hash Generator. By using the site, you agree to these terms.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>Use of the Tool</h2>
+            <p>Hash Generator provides browser-based hash generation and comparison for legitimate security, development, verification, and educational purposes.</p>
+            <p>You are responsible for deciding whether a hash algorithm is appropriate for your use case. Legacy algorithms such as MD5 and SHA-1 may be unsuitable for security-sensitive applications.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>Acceptable Use</h2>
+            <p>You agree not to use Hash Generator in a way that:</p>
+            <ul>
+                <li>Violates any applicable law or regulation.</li>
+                <li>Attempts to disrupt, overload, or interfere with the site or its hosting infrastructure.</li>
+                <li>Infringes the rights, privacy, or security of another person or organization.</li>
+                <li>Misrepresents generated hashes as proof of authenticity when you do not have a reliable trusted source for comparison.</li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h2>No Warranty</h2>
+            <p>Hash Generator is provided on an "as is" and "as available" basis. We do not warrant that the site will be uninterrupted, error-free, secure, or suitable for any particular purpose.</p>
+            <p>You should independently verify important results before relying on them in production, legal, financial, security, or other sensitive contexts.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>Limitation of Liability</h2>
+            <p>To the fullest extent permitted by law, Hash Generator and its maintainers will not be liable for any direct, indirect, incidental, consequential, special, or punitive damages arising from your use of or inability to use the site.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>Changes to These Terms</h2>
+            <p>We may update these Terms of Use from time to time. Changes will be posted on this page with a new last updated date. Continued use of Hash Generator after changes are posted means you accept the updated terms.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Hash Generator. Free online cryptographic hash tool.</p>
+            <p class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <span aria-hidden="true">|</span>
+                <a href="terms.html">Terms of Service</a>
+            </p>
+            <p class="disclaimer">This tool performs hashing entirely in your browser. No data is sent to servers.</p>
+            <p class="footer-date">Last updated: July 6, 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeToggle.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', nextTheme);
+            localStorage.setItem('theme', nextTheme);
+            themeToggle.textContent = nextTheme === 'dark' ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>

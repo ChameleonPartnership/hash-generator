@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Hash Generator, a browser-based hash generation tool.">
+    <meta name="keywords" content="Hash Generator privacy policy, browser hash tool privacy, client-side hashing">
+    <meta name="author" content="Hash Generator">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hash-generator.pro/privacy.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Privacy Policy - Hash Generator">
+    <meta property="og:description" content="Learn how Hash Generator protects your privacy with client-side browser hashing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hash-generator.pro/privacy.html">
+    <meta property="og:image" content="https://hash-generator.pro/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy - Hash Generator">
+    <meta name="twitter:description" content="Learn how Hash Generator protects your privacy with client-side browser hashing.">
+    <meta name="twitter:image" content="https://hash-generator.pro/og-image.png">
+
+    <!-- Publishing Dates -->
+    <meta property="article:published_time" content="2026-07-06T00:00:00Z">
+    <meta property="article:modified_time" content="2026-07-06T00:00:00Z">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Privacy Policy - Hash Generator",
+        "description": "Privacy Policy for Hash Generator, a browser-based hash generation tool.",
+        "url": "https://hash-generator.pro/privacy.html",
+        "datePublished": "2026-07-06T00:00:00Z",
+        "dateModified": "2026-07-06T00:00:00Z"
+    }
+    </script>
+
+    <title>Privacy Policy - Hash Generator</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23667eea'>#</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Hash Generator</h1>
+                <p class="tagline">Generate cryptographic hashes instantly</p>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="intro-section">
+            <h2>Privacy Policy</h2>
+            <p class="section-blurb">Last updated: July 6, 2026</p>
+            <p>Hash Generator is designed as a private, browser-based utility. This policy explains what information is processed when you use the site.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>Client-Side Hashing</h2>
+            <p>All hash generation and hash comparison happens client-side in your browser. Text you type, files you select, generated hashes, and comparison values are processed locally on your device and are not sent to a Hash Generator server.</p>
+            <p>Because the tool runs locally in your browser, you should still avoid entering sensitive information unless you understand the risks of displaying or storing that information on your own device.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>Information We Store Locally</h2>
+            <p>Hash Generator may use your browser's localStorage to remember your theme preference and hash history. This information stays in your browser on your device unless you clear it, use browser settings that sync storage, or otherwise export it yourself.</p>
+            <p>You can clear locally stored site data through your browser settings or by using controls provided in the tool where available.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>Server Logs and Analytics</h2>
+            <p>Hash Generator does not require user accounts and does not intentionally collect the text, files, or hash values you process. Standard hosting infrastructure may receive basic technical request information, such as IP address, browser type, requested page, and timestamps, when pages and assets are loaded.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>Google AdSense</h2>
+            <p>This site may display advertising through Google AdSense. Google and its partners may use cookies or similar technologies to serve ads based on your prior visits to this site or other websites.</p>
+            <p>You can learn more about Google's advertising practices and controls in Google's advertising policies at <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer">policies.google.com/technologies/ads</a>.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy as the site changes. The updated version will be posted on this page with a new last updated date.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Hash Generator. Free online cryptographic hash tool.</p>
+            <p class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <span aria-hidden="true">|</span>
+                <a href="terms.html">Terms of Service</a>
+            </p>
+            <p class="disclaimer">This tool performs hashing entirely in your browser. No data is sent to servers.</p>
+            <p class="footer-date">Last updated: July 6, 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeToggle.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', nextTheme);
+            localStorage.setItem('theme', nextTheme);
+            themeToggle.textContent = nextTheme === 'dark' ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>
