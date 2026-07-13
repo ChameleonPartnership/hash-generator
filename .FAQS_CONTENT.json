@@ -1,0 +1,50 @@
+[
+  [
+    "What is a hash function?",
+    "A hash function is a mathematical algorithm that converts input data (any size) into fixed-length hash values."
+  ],
+  [
+    "Is hashing the same as encryption?",
+    "No. Hashing is one-way (irreversible); encryption is two-way (reversible with a key)."
+  ],
+  [
+    "What is MD5?",
+    "MD5 produces 128-bit (32 hex char) hashes. Now cryptographically broken; avoid for security-critical applications."
+  ],
+  [
+    "What is SHA1?",
+    "SHA1 produces 160-bit hashes (40 hex chars). Has known vulnerabilities; deprecated for security applications."
+  ],
+  [
+    "What is SHA256?",
+    "SHA256 produces 256-bit hashes (64 hex chars). Part of SHA-2, considered secure for most applications."
+  ],
+  [
+    "What is SHA512?",
+    "SHA512 produces 512-bit hashes (128 hex chars). Part of SHA-2, stronger than SHA256."
+  ],
+  [
+    "Why use hash functions?",
+    "Uses include: verify data integrity, create digital signatures, password storage, detect tampering."
+  ],
+  [
+    "Can I reverse a hash?",
+    "No. Cryptographic hashes are designed to be one-way (irreversible). You cannot get original data from hash."
+  ],
+  [
+    "Why hash passwords?",
+    "Hashing protects passwords: if databases are breached, actual passwords remain secret (attackers get hashes)."
+  ],
+  [
+    "What is a salt?",
+    "A salt is random data added before hashing. Prevents identical hashes and rainbow table attacks."
+  ],
+  [
+    "Can different inputs produce the same hash?",
+    "Theoretically yes (collision), but cryptographic functions make this computationally infeasible."
+  ],
+  [
+    "Is this generator secure for production passwords?",
+    "For learning yes. For production, use dedicated password hashing: bcrypt, scrypt, Argon2."
+  ]
+]
