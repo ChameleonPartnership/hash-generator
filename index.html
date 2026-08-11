@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free online hash generator for MD5, SHA-1, SHA-256, SHA-384, SHA-512. Generate cryptographic hashes from text or files instantly with verification.">
+    <meta name="description" content="Generate MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hashes from text or files in your browser, with checksum examples and verification guidance.">
     <meta name="keywords" content="hash generator, MD5, SHA-256, SHA-1, SHA-384, SHA-512, online hash tool, cryptographic hash, free hash generator">
     <meta name="author" content="Hash Generator">
     <meta name="robots" content="index, follow">
@@ -24,7 +24,7 @@
     
     <!-- Publishing Dates -->
     <meta property="article:published_time" content="2026-01-15T10:00:00Z">
-    <meta property="article:modified_time" content="2026-07-05T00:00:00Z">
+    <meta property="article:modified_time" content="2026-08-11T00:00:00Z">
     
     <!-- Structured Data -->
     <!-- Structured Data: SoftwareApplication -->
@@ -42,18 +42,13 @@
             "price": "0",
             "priceCurrency": "USD"
         },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "500"
-        },
         "author": {
             "@type": "Organization",
-            "name": "Hash Generator Contributors",
+            "name": "Chameleon Partnership",
             "url": "https://hash-generator.pro"
         },
         "datePublished": "2026-01-15T10:00:00Z",
-        "dateModified": "2026-07-05T00:00:00Z"
+        "dateModified": "2026-08-11T00:00:00Z"
     }
     </script>
 
@@ -145,10 +140,6 @@
         "name": "Hash Generator",
         "url": "https://hash-generator.pro",
         "description": "Free online cryptographic hash generator for MD5, SHA-1, SHA-256, SHA-384, SHA-512",
-        "sameAs": [
-            "https://github.com/yourusername/hash-generator",
-            "https://twitter.com/hashgenerator"
-        ],
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "Customer Support",
@@ -195,7 +186,9 @@
         <!-- AISO audit trail: visible answer-first blurb and canonical section anchor confirmed, 2026-07-05. -->
         <section class="intro-section" id="hash-generator">
             <h2>What is a Hash Generator?</h2>
-            <p class="section-blurb">A hash generator converts any text or file into a unique, fixed-length string of characters using cryptographic algorithms. Hash generators are essential for data verification, file integrity checking, password security, and digital signatures. This free online tool supports MD5, SHA-1, SHA-256, SHA-384, and SHA-512 algorithms.</p>
+            <p class="section-blurb">A hash generator converts text or file contents into a fixed-length fingerprint using a one-way mathematical algorithm. The same input always produces the same digest, while even a tiny change, such as adding a full stop or changing one byte in a file, produces a different result. This makes hashes useful when you need to check whether two pieces of data are identical without comparing the full original data.</p>
+            <p>This tool supports MD5, SHA-1, SHA-256, SHA-384, and SHA-512 so you can work with both modern and legacy checksum formats. SHA-256 is the best default for most current verification tasks because it is widely supported and still considered suitable for integrity checks. MD5 and SHA-1 remain available because older download pages, archives, and internal systems still publish those values, but they should not be chosen for new security-sensitive designs.</p>
+            <p>Hash Generator runs in your browser. Text and selected files are processed locally by JavaScript and browser cryptography APIs; the site does not need to upload the material you are checking. That makes it convenient for comparing release checksums, documenting a build artefact, checking a copied configuration snippet, or learning how digest length changes between algorithms.</p>
         </section>
         
         <!-- Input Section -->
@@ -332,6 +325,74 @@
             </div>
         </section>
 
+        <section class="guide-section">
+            <h2>How to Use This Hash Generator</h2>
+            <ol class="step-list">
+                <li><strong>Choose the input type.</strong> Use the text tab for strings, API payloads, configuration snippets, or sample values. Use the file tab when you need a checksum for a downloaded archive, document, image, ISO, CSV export, or build output.</li>
+                <li><strong>Select the algorithms you need.</strong> Leave SHA-256 selected for most work. Add SHA-512 when a system requests it, or add MD5/SHA-1 only when you are matching a legacy checksum published elsewhere.</li>
+                <li><strong>Enter or load the data.</strong> For text, paste the exact value including spaces and line breaks. For files, choose or drop the file you want to verify. The hash changes if the input changes, so copy the data exactly as it appears in the source system.</li>
+                <li><strong>Copy the generated digest.</strong> Use the copy button beside the result you need. If another system expects uppercase hexadecimal, enable the uppercase option before copying.</li>
+                <li><strong>Verify when needed.</strong> Open the verify tab and paste a trusted checksum from the publisher, release notes, ticket, or audit record. Generate the hash for your local input and compare the two values. Matching values mean the input bytes are the same as the source used to create the trusted hash.</li>
+            </ol>
+
+            <h3>Worked Examples</h3>
+            <div class="table-wrap">
+                <table class="examples-table">
+                    <thead>
+                        <tr>
+                            <th>Input</th>
+                            <th>Algorithm</th>
+                            <th>Expected output</th>
+                            <th>Typical use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>hello</code></td>
+                            <td>SHA-256</td>
+                            <td><code>2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824</code></td>
+                            <td>Checking a known test vector while validating an implementation.</td>
+                        </tr>
+                        <tr>
+                            <td><code>Hello</code></td>
+                            <td>SHA-256</td>
+                            <td><code>185f8db32271fe25f561a6fc938b2e264306ec304eda518007d1764826381969</code></td>
+                            <td>Showing that case changes produce a completely different digest.</td>
+                        </tr>
+                        <tr>
+                            <td><code>release-v1.2.0.zip</code> file contents</td>
+                            <td>SHA-256</td>
+                            <td>Depends on the exact file bytes</td>
+                            <td>Confirming a software download matches the maintainer's published checksum.</td>
+                        </tr>
+                        <tr>
+                            <td><code>{"status":"ok"}</code></td>
+                            <td>SHA-512</td>
+                            <td>128 hexadecimal characters</td>
+                            <td>Recording a tamper-evident fingerprint for a small JSON payload.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <h2>Practical Use Cases</h2>
+            <p>Developers often use a hash before and after deployment to confirm that the compiled file in production is the same file produced by the build system. Operations teams use checksums during backup restore tests, where a changed digest can reveal corruption introduced by a storage device, transfer process, or manual edit. Security reviewers use hashes in incident notes because a digest gives them a compact way to identify a suspicious file without repeatedly sharing the file itself.</p>
+            <p>Hashing is also helpful in everyday troubleshooting. If two people claim to be looking at the same CSV export, PDF, configuration file, or installer, each person can generate a SHA-256 hash and compare the values. If the hashes match, the files are byte-for-byte identical. If they do not, the difference may be caused by an extra line ending, a different export date, hidden metadata, compression changes, or a partial download.</p>
+            <p>For password storage, this page is useful for education and demonstrations, but raw SHA hashes are not the right production storage method for user passwords. Real password systems should use a password hashing function such as Argon2, bcrypt, scrypt, or PBKDF2 with a unique salt and appropriate work factor. The SHA outputs here can help you understand the one-way property of hashing, not replace a complete password storage design.</p>
+        </section>
+
+        <section class="guide-section">
+            <h2>More Hashing Guides</h2>
+            <p>These related articles go deeper into algorithm choice, password storage, and checksum workflows:</p>
+            <ul class="resource-list">
+                <li><a href="blog/hash-functions-cryptography.html">Hash Functions and Cryptography</a> explains digest properties, collision resistance, and why SHA-256 replaced older algorithms for most modern work.</li>
+                <li><a href="blog/password-hashing-security.html">Password Hashing and Security</a> covers salts, slow password hashing, and why a plain SHA digest is not enough for storing login credentials.</li>
+                <li><a href="blog/file-integrity-checksums.html">File Integrity and Checksums</a> walks through using hashes to verify downloads, backups, transfers, and audit artefacts.</li>
+            </ul>
+        </section>
+
         <!-- History Section -->
         <section class="history-section" id="historySection" style="display: none;">
             <div class="history-header">
@@ -403,6 +464,26 @@
                     <h3 class="faq-question">How many characters is each hash type?</h3>
                     <p class="faq-answer">Hash lengths vary by algorithm: MD5 produces 32 hexadecimal characters, SHA-1 produces 40 characters, SHA-256 produces 64 characters, SHA-384 produces 96 characters, and SHA-512 produces 128 characters. Longer hashes generally offer greater collision resistance and security.</p>
                 </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Why does a small input change create a very different hash?</h3>
+                    <p class="faq-answer">Cryptographic hash functions are designed with an avalanche effect: a small change in the input should change many characters in the output. This makes accidental or deliberate changes easier to spot because two similar-looking files or strings will not produce similar-looking secure hashes.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I reverse a hash to recover the original text?</h3>
+                    <p class="faq-answer">No. Hashing is a one-way process. You can compare a new input with an existing hash by hashing the new input and checking whether the values match, but the digest itself is not meant to be decoded back into the original message.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Are hashes the same as encryption?</h3>
+                    <p class="faq-answer">No. Encryption is reversible when you have the correct key, which is useful when data must be read again later. Hashing is not reversible and is mainly used for integrity checks, identifiers, signatures, and password verification workflows.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Why does line ending format matter?</h3>
+                    <p class="faq-answer">Hashes are calculated from exact bytes. A Windows-style line ending, Unix-style line ending, trailing space, hidden byte order mark, or final newline can all change the digest. When comparing text hashes, make sure both inputs are copied from the same source representation.</p>
+                </div>
             </div>
         </section>
         
@@ -463,7 +544,8 @@
         <div class="container">
             <h2>About the Maintainer</h2>
             <p class="section-blurb">Hash Generator is maintained by a developer tooling team specialising in private, browser-based utilities for security, QA, and software delivery workflows. The tool is reviewed for local-only processing, practical checksum verification, accessible controls, and clear guidance on when legacy algorithms such as MD5 and SHA-1 are appropriate.</p>
-            <p class="footer-date">Last updated: July 5, 2026</p>
+            <p>Read more about the site and its ownership on the <a href="about.html">About Hash Generator</a> page.</p>
+            <p class="footer-date">Last updated: August 11, 2026</p>
         </div>
     </section>
 
@@ -475,12 +557,17 @@
                 <a href="privacy.html">Privacy Policy</a>
                 <span aria-hidden="true">|</span>
                 <a href="terms.html">Terms of Service</a>
+                <span aria-hidden="true">|</span>
+                <a href="about.html">About</a>
+                <span aria-hidden="true">|</span>
+                <a href="blog/">Blog</a>
             </p>
             <p class="disclaimer">This tool performs hashing entirely in your browser. No data is sent to servers.</p>
-            <p class="footer-date">Last updated: July 5, 2026</p>
+            <p class="footer-date">Last updated: August 11, 2026</p>
         </div>
     </footer>
 
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/privacy-consent.js"></script>
 </body>
 </html>

@@ -144,25 +144,13 @@ npx http-server
 ## Configuration
 
 ### AdSense Integration
-To enable Google AdSense:
+To enable Google AdSense, use the standard Auto Ads script with the approved publisher ID:
 
-1. Replace placeholder in `index.html`:
 ```html
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6100778423642867" crossorigin="anonymous"></script>
 ```
 
-2. Add ad slots:
-```html
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
-     data-ad-slot="YOUR_AD_SLOT_ID"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-```
+Do not add placeholder ad unit slots or manual ad containers unless real ad units have been created in AdSense.
 
 ### Custom Domain
 Update these in `index.html` and `sitemap.xml`:

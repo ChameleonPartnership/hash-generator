@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Hash Generator, a browser-based checksum and cryptographic hash utility maintained by Chameleon Partnership for private local use.">
+    <meta name="author" content="Chameleon Partnership">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hash-generator.pro/about.html">
+
+    <meta property="og:title" content="About Hash Generator">
+    <meta property="og:description" content="Learn who maintains Hash Generator and how the browser-based hashing tool is designed.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hash-generator.pro/about.html">
+    <meta property="og:image" content="https://hash-generator.pro/og-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Hash Generator">
+    <meta name="twitter:description" content="Learn who maintains Hash Generator and how the browser-based hashing tool is designed.">
+    <meta name="twitter:image" content="https://hash-generator.pro/og-image.png">
+
+    <title>About Hash Generator</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23667eea'>#</text></svg>">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Hash Generator</h1>
+                <p class="tagline">Generate cryptographic hashes instantly</p>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-section">
+            <h2>About Hash Generator</h2>
+            <p class="section-blurb">Hash Generator is a free browser-based utility for creating and comparing MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes from text and files.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>Ownership</h2>
+            <p>The site is owned and maintained by Chameleon Partnership. It is built for developers, testers, support teams, students, and security-conscious users who need a quick way to create checksums without sending their input to a remote conversion API.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>How the Tool Is Designed</h2>
+            <p>Hashing is performed in the browser so pasted text and selected files stay on your device. The homepage includes algorithm guidance, verification steps, examples, and links to longer articles explaining checksum workflows, cryptographic hash functions, and password hashing limitations.</p>
+            <p>The tool is intended for legitimate integrity checking, software delivery, troubleshooting, and learning. It does not replace a complete security review, and legacy algorithms such as MD5 and SHA-1 are labelled as unsuitable for new cryptographic use.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>Key Pages</h2>
+            <ul>
+                <li><a href="index.html">Hash Generator tool</a></li>
+                <li><a href="blog/">Hash Generator blog</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Hash Generator. Free online cryptographic hash tool.</p>
+            <p class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <span aria-hidden="true">|</span>
+                <a href="terms.html">Terms of Service</a>
+                <span aria-hidden="true">|</span>
+                <a href="about.html">About</a>
+            </p>
+            <p class="footer-date">Last updated: August 11, 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeToggle.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', nextTheme);
+            localStorage.setItem('theme', nextTheme);
+            themeToggle.textContent = nextTheme === 'dark' ? '☀️' : '🌙';
+        });
+    </script>
+    <script src="assets/js/privacy-consent.js"></script>
+</body>
+</html>
