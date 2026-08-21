@@ -1,6 +1,6 @@
 # Hash Generator — Complete Site Documentation
 
-**URL:** https://hash-generator.pro/  
+**URL:** https://www.hash-generator.pro/  
 **Type:** Browser-based cryptographic hash utility  
 **Last Updated:** 2026-07-05  
 **Licence:** MIT
